@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Text_Editor.Models
@@ -9,6 +10,7 @@ namespace Text_Editor.Models
         public string Title { get; set; }
         public string Content { get; set; }
 
+        [Required]
         public string? UserId { get; set; }
         [ForeignKey("UserId")]
 
