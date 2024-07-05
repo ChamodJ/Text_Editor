@@ -49,7 +49,7 @@ namespace Text_Editor.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", doc.UserId);
+            
             return View(doc);
         }
 
